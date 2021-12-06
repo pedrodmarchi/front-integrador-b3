@@ -1,7 +1,7 @@
 import './style.scss';
 import {Nav, Navbar, NavDropdown, Container} from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
-import useAxios from '../../hooks/useAxios';
+//import {Helmet} from 'react-helmet';
+//import useAxios from '../../hooks/useAxios';
 
 const Header = () => {
   
@@ -11,14 +11,15 @@ const Header = () => {
       
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
-                <Navbar.Brand href="#home">Tech Store</Navbar.Brand>
+                <Navbar.Brand href="#home">Tech Store
+                    <img src="./img/logo1.png" alt= ""/>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         
                     </Nav>
                     <Nav>
-                        
                         <Nav.Link href="#">Home</Nav.Link>
                         <NavDropdown title="Categorias" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Celulares</NavDropdown.Item>
