@@ -1,8 +1,10 @@
 import './style.scss';
 import {Nav, Navbar, NavDropdown, Container, Button} from 'react-bootstrap';
 import { BsFillCartFill } from 'react-icons/bs';
+import {Link} from 'react-router-dom';
 //import {Helmet} from 'react-helmet';
 //import useAxios from '../../hooks/useAxios';
+import logo2 from './img/logo2.svg';
 
 const Header = () => {
 
@@ -11,14 +13,14 @@ const Header = () => {
         <>
         <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand href="#home">Tech Store
-                <img src="./img/logo1.png" class="img-fluid" alt= ""/>
+            <Navbar.Brand as={Link} to={"/"}><img id="logo" src={logo2} class="img-fluid" alt= "logo da Tech Store"/>
+            Tech Store
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#sobre">Sobre</Nav.Link>
+                    <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
+                    <Nav.Link as={Link} to={"/sobre"}>Sobre</Nav.Link>
                     <NavDropdown title="Categorias" id="collasible-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Celulares</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">TVs</NavDropdown.Item>
