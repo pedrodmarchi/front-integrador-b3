@@ -5,8 +5,8 @@ import { BsFillCartFill } from 'react-icons/bs';
 //import useAxios from '../../hooks/useAxios';
 
 const Header = () => {
-  
-    
+
+
     return (
         <>
         <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">

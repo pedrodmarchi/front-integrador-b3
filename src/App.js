@@ -1,12 +1,11 @@
 import './App.scss';
-import Header from './pages/home/Components/Header/index';
-import Home from './pages/home/Components/Home/index';
+import RouteList from './routes';
+
 
 function App() {
   return (
     <>
-        <Header/>
-        <Home/>
+      <RouteList />
     </>
   )
 }
