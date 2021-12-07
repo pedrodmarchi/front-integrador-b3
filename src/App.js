@@ -1,10 +1,11 @@
 import './App.scss';
-import Header from './pages/home/Components/Header/index';
+import RouteList from './routes';
+
 
 function App() {
   return (
     <>
-        <Header/>
+      <RouteList />
     </>
   );
 }
