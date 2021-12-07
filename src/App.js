@@ -7,7 +7,7 @@ function App() {
     <>
       <RouteList />
     </>
-  );
+  )
 }
 
 export default App;
