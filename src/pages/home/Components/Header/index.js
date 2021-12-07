@@ -1,7 +1,7 @@
 import './style.scss';
 import {Nav, Navbar, NavDropdown, Container} from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
-import useAxios from '../../hooks/useAxios';
+/* import useAxios from '../../hooks/useAxios'; */
 
 const Header = () => {
   
