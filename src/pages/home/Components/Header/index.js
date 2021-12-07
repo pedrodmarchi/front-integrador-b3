@@ -1,8 +1,12 @@
 import './style.scss';
-import {Nav, Navbar, NavDropdown, Container, Button} from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, Container, Button } from 'react-bootstrap';
 import { BsFillCartFill } from 'react-icons/bs';
+<<<<<<< HEAD
 import {Link} from 'react-router-dom';
 //import {Helmet} from 'react-helmet';
+=======
+import { Helmet } from 'react-helmet';
+>>>>>>> 5deffa6a2dfbc1812ccb03c0096d0d4d439d2174
 //import useAxios from '../../hooks/useAxios';
 import logo2 from './img/logo2.svg';
 
