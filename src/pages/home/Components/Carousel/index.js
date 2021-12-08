@@ -9,7 +9,7 @@ const Carrossel = () => {
    
 
     return (
-        <Carousel variant="dark">
+        <Carousel variant="dark bg-white">
           <Carousel.Item>
             <Row className="y-4">
               <Col md={4} sm={6}><a href="#">
