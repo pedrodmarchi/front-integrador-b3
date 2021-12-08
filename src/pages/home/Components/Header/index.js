@@ -1,24 +1,24 @@
 import './style.scss';
 import { Nav, Navbar, NavDropdown, Container, Button } from 'react-bootstrap';
 import { BsFillCartFill } from 'react-icons/bs';
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import {Link} from 'react-router-dom';
 //import {Helmet} from 'react-helmet';
-=======
+//=======
 import { Helmet } from 'react-helmet';
->>>>>>> 5deffa6a2dfbc1812ccb03c0096d0d4d439d2174
+//>>>>>>> 5deffa6a2dfbc1812ccb03c0096d0d4d439d2174
 //import useAxios from '../../hooks/useAxios';
-import logo2 from './img/logo2.svg';
+import logo from './img/logo.png';
 
 const Header = () => {
 
 
     return (
         <>
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
-            <Container>
-            <Navbar.Brand as={Link} to={"/"}><img id="logo" src={logo2} class="img-fluid" alt= "logo da Tech Store"/>
-            Tech Store
+        <Navbar collapseOnSelect expand="md" bg="light" variant="light">
+            <Container fluid>
+            <Navbar.Brand as={Link} to={"/"}>
+                <img id="logo" src={logo} class="img-fluid" alt= "logo da Tech Store"/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

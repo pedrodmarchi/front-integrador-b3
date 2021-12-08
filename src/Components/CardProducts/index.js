@@ -2,7 +2,7 @@
 import './style.scss';
 import api from '../../services/api';
 import { useEffect, useState } from 'react';
-import { Card, ListGroup, ListGroupItem, CardGroup,Row } from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem, CardGroup,Row, Container, Col } from 'react-bootstrap';
 
 
 const CardProducts = () => {
@@ -23,7 +23,7 @@ const CardProducts = () => {
 
     return (
         <>
-        <Row xs={1} md={2} className="g-4">
+        <Row xs={1} md={2}  className="g-4">
             {products.map((product) => 
                 <Card style={{ width: '18rem' }} key={product.id}>
                     <Card.Img variant="top" src={product.image} alt="imagem do produto" />

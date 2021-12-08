@@ -5,6 +5,7 @@ import Product from '../pages/Product';
 import Cart from '../pages/Cart';
 import About from '../pages/About';
 import Header from '../pages/Home/Components/Header';
+import Footer from "../pages/Home/Components/Footer/footer";
 
 const RouteList = () => {
     return (
@@ -18,6 +19,7 @@ const RouteList = () => {
                     <Route path="/produtos" element={<Products />} />
                     <Route path="/sobre" element={<About />} />
                 </Routes>
+            <Footer />    
             </BrowserRouter>
         </>
     )
