@@ -50,13 +50,13 @@ const About = () => {
                         <div className="card">
                             <h3>{item.name}</h3>
                             <img id="profileImage" alt="Imagem de cada integrante" src={item.image} ></img>
-                            <div class="icons">
+                            <div className="icons">
                                 <a rel="noreferrer" target="_blank" href={item.github}>
-                                    <img target="_blank" src={github} alt="logo do github" class="networkLogo"></img>
+                                    <img target="_blank" src={github} alt="logo do github" className="networkLogo"></img>
                                 </a>
 
                                 <a rel="noreferrer" target="_blank" href={item.linkedin}>
-                                    <img target="_blank" src={linkedin} alt="logo do github" class="networkLogo"></img>
+                                    <img target="_blank" src={linkedin} alt="logo do github" className="networkLogo"></img>
                                 </a>
 
                             </div>

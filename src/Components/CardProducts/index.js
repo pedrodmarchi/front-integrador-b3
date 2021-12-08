@@ -2,8 +2,8 @@
 import './style.scss';
 import api from '../../services/api';
 import { useEffect, useState } from 'react';
-import { Card, ListGroup, ListGroupItem, CardGroup,Row, Container, Col } from 'react-bootstrap';
-
+import { Card, ListGroup, ListGroupItem, CardGroup,Row, Container, Col, Button } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 const CardProducts = () => {
     const [products, setProducts] = useState([]);
@@ -38,8 +38,7 @@ const CardProducts = () => {
                         <ListGroupItem>R$ {product.price}</ListGroupItem>
                     </ListGroup>
                     <Card.Body>
-                        <Card.Link href="#">Card Link</Card.Link>
-                        <Card.Link href="#">Another Link</Card.Link>
+                        <Button as={Link} to={`/produtos/${product.id}`}>Comprar</Button>
                     </Card.Body>
                 </Card>
             )
