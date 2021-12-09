@@ -1,4 +1,4 @@
-import './style.scss';
+import style from './style.scss';
 
 const Footer = () => {
     const generateDateString = () => {
@@ -10,8 +10,7 @@ const Footer = () => {
         <>
         <footer id="footer">
           <p className="copy-right mt-3 fw-bold">
-           <span>Tech Store || </span> 
-            Todos os direitos reservados. &copy; Copyright {generateDateString()}
+           <span>Tech Store </span> &copy; Copyright {generateDateString()}
           </p>
         </footer>
         </>
