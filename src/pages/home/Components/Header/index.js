@@ -21,7 +21,7 @@ const Header = () => {
                 <img id="logo" src={logo} class="img-fluid" alt= "logo da Tech Store"/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
+            <Navbar.Collapse id="responsive-navbar-nav px-2">
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/sobre"}>Sobre</Nav.Link>
@@ -35,7 +35,7 @@ const Header = () => {
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>
-                <Nav>
+                <Nav className="px-2">
                     <Nav.Link href="#cart">
                         <Button variant="outline-success" className="d-inline-flex align-items-center">
                             <BsFillCartFill className="me-2"/>

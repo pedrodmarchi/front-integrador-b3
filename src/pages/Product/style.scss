@@ -1,0 +1,28 @@
+.product-img-div {
+
+  max-width: 900px;
+
+  .product-img {
+    width: 90vw;
+  }
+
+  @media (min-width: 768px) {
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1000px 100px;
+    }
+
+  }
+}
+
+.purchase-div {
+  width: 80vw;
+  max-width: 900px;
+  max-height: 70vh;
+}
+
+.master-div {
+  width: 90vw;
+  justify-content: center;
+}

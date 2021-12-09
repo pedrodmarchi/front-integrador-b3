@@ -9,7 +9,7 @@ const Footer = () => {
     return(
         <>
         <footer id="footer">
-          <p className="copy-right mt-3 fw-bold">
+          <p className="copy-right my-3 fw-bold text-center">
            <span>Tech Store || </span> 
             Todos os direitos reservados. &copy; Copyright {generateDateString()}
           </p>

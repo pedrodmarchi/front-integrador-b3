@@ -1,30 +1,36 @@
 import { Card, ListGroup, ListGroupItem, CardGroup,Row, Container, Col, Button, Badge } from 'react-bootstrap';
 import { BsFillCartPlusFill, BsFillStarFill } from "react-icons/bs";
+import './style.scss';
 
 const Product = () => {
-
+    
     
     return(
         <>
-            <Container className="vw-100 mx-auto py-4">
-                <Row class="row-2 gx-4 gx-lg-5 vw-100">
-                    <Col md={8} sm={8}>
-                        <img className="mb-5 mb-md-0 max-auto d-flex" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..."/>
-                        <div className="d-inline-block">
-                        <h1 class="display-5 fw-bolder mt-3">Shop item template</h1>
-                        <div>
-                            <BsFillStarFill/><BsFillStarFill/><BsFillStarFill/><BsFillStarFill/><BsFillStarFill/>
+            <div className="master-div mw-auto mx-auto py-4 px-3 mx-md-auto d-md-inline-flex">
+                <div className="product-img-div gx-4 mx-md-0 d-md-inline-block">
+                    <div className="d-block">
+                        <img className="product-img mb-5 mb-md-0 mx-auto w-100" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..."/>
+                    </div>
+                
+                    <div>
+                        <div className="d-block">
+                            <div className="d-block">
+                                <h1 class="display-5 fw-bolder mt-3">Shop item template</h1>
+                                <div>
+                                <   BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/>
+                                </div>
+                                <p class="lead mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+                                <div class="d-flex">
+                                
+                                </div>
+                            </div>
                         </div>
-                        <p class="lead mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
-                        <div class="d-flex">
-                            
-                        </div>
-                        </div>
-                    </Col>
-
-               
-                    <Col md={4} sm={6}>
-                        <Row className="row-2 bg-white border border-grey rounded py-4">
+                    </div>
+               </div>
+    
+                <div className="purchase-div bg-white border border-grey rounded py-4 text-center d-inline-flex w-100 justify-content-center">
+                    <div>
                         <ListGroup className="list-group-flush"> 
                             <ListGroupItem className="mx-auto mt-2"><Badge bg="success">R$</Badge></ListGroupItem>         
                             <ListGroupItem className="mx-auto mt-2">À vista no PIX com até <p className="fw-bolder d-inline">15% OFF</p></ListGroupItem>
@@ -36,10 +42,9 @@ const Product = () => {
                                 <p className="mb-0 d-inline-flex"> Adicionar ao carrinho </p>
                         </Button>
                         </div>
-                        </Row>
-                    </Col> 
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </>
     )
     }

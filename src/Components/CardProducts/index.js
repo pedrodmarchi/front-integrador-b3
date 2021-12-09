@@ -24,9 +24,9 @@ const CardProducts = () => {
 
     return (
         <>
-        <Row xs={1} md={2}  className="g-4 justify-content-between px-5 py-5">
+        <Row className="g-4 flex-column mx-auto flex-md-row justify-content-between px-5 py-5 ">
             {products.map((product) => 
-                <Card  style={{ width: '18rem' }} key={product.id} className="py-3 px-3">
+                <Card  style={{ width: '18rem' }} key={product.id} className="py-3 px-3 mx-auto">
                     <Card.Img variant="top" src={product.image} alt="imagem do produto" className="card-img-top"/>
                     <Card.Body className="">
                         <Card.Title as={Link} to={"/produtos/produto"}>{product.title}</Card.Title>
@@ -39,7 +39,7 @@ const CardProducts = () => {
                     </Card.Body>
                     <ListGroup className="list-group-flush"> 
                         <ListGroupItem>
-                            <BsFillStarFill/><BsFillStarFill/><BsFillStarFill/><BsFillStarFill/><BsFillStarFill/>
+                            <BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/>
                         </ListGroupItem>             
                         <ListGroupItem className="mx-auto"><Badge bg="success">R$ {product.price}</Badge></ListGroupItem>
                     </ListGroup>
