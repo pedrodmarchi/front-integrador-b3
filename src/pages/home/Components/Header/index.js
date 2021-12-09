@@ -30,7 +30,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="md" bg="light" variant="light">
+            {/* <Navbar collapseOnSelect expand="md" bg="light" variant="light">
                 <Container fluid>
                     <Navbar.Brand as={Link} to={"/"}>
                         <img as={Link} to={"/"} id="logo" src={logo} className="img-fluid" alt="logo da Tech Store" />
@@ -59,12 +59,12 @@ const Header = () => {
                         </Nav.Link>
                     </Nav>
                 </Container>
-            </Navbar>
+            </Navbar> */}
 
 
 
 
-            {/* <Navbar collapseOnSelect expand="md" bg="light" variant="light">
+            <Navbar collapseOnSelect expand="md" bg="light" variant="light">
             <Container fluid>
             <Navbar.Brand as={Link} to={"/"}>
                 <img id="logo" src={logo} class="img-fluid" alt= "logo da Tech Store"/>
@@ -93,7 +93,7 @@ const Header = () => {
                     </Nav.Link>
                 </Nav>
             </Container>
-        </Navbar> */}
+        </Navbar>
         </>
     )
 }
