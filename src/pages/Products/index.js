@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { Card, ListGroup, ListGroupItem, CardGroup, Row, Container, Col, Button, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BsFillCartPlusFill, BsFillStarFill } from "react-icons/bs";
+import CardProducts from '../../Components/CardProducts'
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -29,12 +30,12 @@ const Products = () => {
 
     return (
         <>
-            <Row xs={1} md={2} className="g-4 justify-content-between px-5 py-5">
+        <Row xs={1} md={2} className="g-4 justify-content-between px-5 py-5">
                 {products.map((product) =>
                     <Card style={{ width: '18rem' }} key={product.id} className="py-3 px-3">
                         <Card.Img variant="top" src={product.image} alt="imagem do produto" className="card-img-top" />
                         <Card.Body className="">
-                            <Card.Title>{product.title}</Card.Title>
+                            <Card.Title as={Link} to={`/produtos/${product.id}`}>{product.title}</Card.Title>
                             <Card.Text>
                                 {product.description}
                                 <Card.Link className="d-block mt-1">

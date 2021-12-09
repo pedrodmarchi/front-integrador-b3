@@ -2,9 +2,9 @@
 import './style.scss';
 import api from '../../services/api';
 import { useEffect, useState } from 'react';
-import { Card, ListGroup, ListGroupItem, CardGroup,Row, Container, Col, Button,Badge } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { Card, ListGroup, ListGroupItem, CardGroup,Row, Container, Col, Button, Badge } from 'react-bootstrap';
 import { BsFillCartPlusFill, BsFillStarFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const CardProducts = () => {
     const [products, setProducts] = useState([]);
@@ -24,22 +24,22 @@ const CardProducts = () => {
 
     return (
         <>
-         <Row xs={1} md={2}  className="g-4 justify-content-between px-5 py-5">
+        <Row className="g-4 flex-column mx-auto flex-md-row justify-content-between px-5 py-5 ">
             {products.map((product) => 
-                <Card  style={{ width: '18rem' }} key={product.id} className="py-3 px-3">
+                <Card  style={{ width: '18rem' }} key={product.id} className="py-3 px-3 mx-auto">
                     <Card.Img variant="top" src={product.image} alt="imagem do produto" className="card-img-top"/>
                     <Card.Body className="">
-                        <Card.Title>{product.title}</Card.Title>
+                        <Card.Title as={Link} to={`/produtos/${product.id}`}>{product.title}</Card.Title>
                         <Card.Text>
                             {product.description}
-                            <Card.Link className="d-block mt-1">
+                            <Card.Link as={Link} to={product.category.name} className="d-block mt-1">
                                 {product.category.name.toUpperCase()}
                             </Card.Link>
                         </Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush"> 
                         <ListGroupItem>
-                            <BsFillStarFill/><BsFillStarFill/><BsFillStarFill/><BsFillStarFill/><BsFillStarFill/>
+                            <BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/><BsFillStarFill fill="#ffc107"/>
                         </ListGroupItem>             
                         <ListGroupItem className="mx-auto"><Badge bg="success">R$ {product.price}</Badge></ListGroupItem>
                     </ListGroup>

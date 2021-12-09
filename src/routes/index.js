@@ -5,7 +5,7 @@ import Product from '../pages/Product';
 import Cart from '../pages/Cart';
 import About from '../pages/About';
 import Header from '../pages/Home/Components/Header';
-import Footer from "../pages/Home/Components/Footer/footer";
+import Footer from "../pages/Home/Components/Footer";
 
 const RouteList = () => {
     return (
