@@ -11,7 +11,7 @@ const Cart = () => {
     return (
         <>
 
-            <h2 className="text-center my-4">Cart</h2>
+            <h2 className="text-center my-4">404 Manutenção</h2>
             {/* <Container fluid="lg" >
                 <Row>
                     <Col md={12} lg={9}>
