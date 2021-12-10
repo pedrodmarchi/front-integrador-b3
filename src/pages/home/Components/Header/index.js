@@ -74,9 +74,7 @@ const Header = () => {
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/sobre"}>Sobre</Nav.Link>
-                    <NavDropdown title="Categorias" id="collasible-nav-dropdown">
-                        <NavDropdown.Item as={Link} to={"/produtos"}>Todos</NavDropdown.Item>
-                        <Dropdown.Divider /> 
+                    <NavDropdown title="Categorias" id="collasible-nav-dropdown"> 
                         {products.map((product) =>               
                                     <NavDropdown.Item as={Link} to={`produtos/categorias/nome/${product.name}`}>{product.name}</NavDropdown.Item>
                                     )}

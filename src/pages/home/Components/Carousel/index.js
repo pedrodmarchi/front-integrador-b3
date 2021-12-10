@@ -34,12 +34,12 @@ const Carrossel = () => {
 
     return (
         <>
-            <Carousel variant="dark bg-white">
-                <Carousel.Item>
+            <Carousel variant="dark bg-white mx-auto">
+                <Carousel.Item className="mx-auto">
                     <Row className="y-4">
                     <Col md={4} sm={6}>
                         {products[1] && (
-                            <Card style={{ width: '18rem' }} className="py-3 px-3">
+                            <Card style={{ width: '18rem' }} className="py-3 px-3 border-0">
                                 <Card.Img variant="top" src={products[1].image} alt="imagem do produto" className="card-img-top" />
                                 <Card.Body className="">
                                     <Card.Title>{products[1].title}</Card.Title>
@@ -55,7 +55,7 @@ const Carrossel = () => {
                     </Col>
                     <Col md={4} sm={6} className="d-none d-sm-block">
                     {products[10] && (
-                            <Card style={{ width: '18rem' }} className="py-3 px-3">
+                            <Card style={{ width: '18rem' }} className="py-3 px-3 border-0">
                                 <Card.Img variant="top" src={products[10].image} alt="imagem do produto" className="card-img-top" />
                                 <Card.Body className="">
                                     <Card.Title>{products[10].title}</Card.Title>
@@ -71,7 +71,7 @@ const Carrossel = () => {
                     </Col>
                     <Col md={4} sm={6} className="d-none d-md-block">
                     {products[15] && (
-                            <Card style={{ width: '18rem' }} className="py-3 px-3">
+                            <Card style={{ width: '18rem' }} className="py-3 px-3 border-0">
                                 <Card.Img variant="top" src={products[15].image} alt="imagem do produto" className="card-img-top" />
                                 <Card.Body className="">
                                     <Card.Title>{products[15].title}</Card.Title>
@@ -87,11 +87,11 @@ const Carrossel = () => {
                     </Col>
                 </Row>
             </Carousel.Item>
-            <Carousel.Item>
+            <Carousel.Item className="mx-auto">
                 <Row>
                     <Col md={4} sm={6}>
                     {products[22] && (
-                            <Card style={{ width: '18rem' }} className="py-3 px-3">
+                            <Card style={{ width: '18rem' }} className="py-3 px-3 border-0">
                                 <Card.Img variant="top" src={products[22].image} alt="imagem do produto" className="card-img-top" />
                                 <Card.Body className="">
                                     <Card.Title>{products[22].title}</Card.Title>
@@ -107,7 +107,7 @@ const Carrossel = () => {
                     </Col>
                     <Col md={4} sm={6} className="d-none d-sm-block">
                     {products[3] && (
-                            <Card style={{ width: '18rem' }} className="py-3 px-3">
+                            <Card style={{ width: '18rem' }} className="py-3 px-3 border-0">
                                 <Card.Img variant="top" src={products[3].image} alt="imagem do produto" className="card-img-top" />
                                 <Card.Body className="">
                                     <Card.Title>{products[3].title}</Card.Title>
@@ -123,7 +123,7 @@ const Carrossel = () => {
                     </Col>
                     <Col md={4} sm={6} className="d-none d-md-block">
                     {products[9] && (
-                            <Card style={{ width: '18rem' }} className="py-3 px-3">
+                            <Card style={{ width: '18rem' }} className="py-3 px-3  border-0">
                                 <Card.Img variant="top" src={products[9].image} alt="imagem do produto" className="card-img-top" />
                                 <Card.Body className="">
                                     <Card.Title>{products[9].title}</Card.Title>
