@@ -84,7 +84,7 @@ const Header = () => {
                 </Nav>
             </Navbar.Collapse>
                 <Nav className="px-2">
-                    <Nav.Link href="#cart">
+                    <Nav.Link as={Link} to={"/carrinho"}>
                         <Button variant="outline-success" className="d-inline-flex align-items-center">
                             <BsFillCartFill className="me-2"/>
                             <p className="align-self-center mb-0 d-none d-md-block"> Carrinho </p>
