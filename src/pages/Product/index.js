@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import api from '../../services/api';
 import './style.scss';
+import { Helmet } from 'react-helmet';
 
 const Product = () => {
     const [product, setProduct] = useState({});
@@ -25,6 +26,9 @@ const Product = () => {
     
     return(
         <>
+        <Helmet>
+                <title>Tech Store | {`${product.title}`}</title>
+        </Helmet>
         {product.id &&(
             <div className="master-div mw-auto mx-auto py-4 px-3 mx-md-auto d-md-inline-flex">
             <div className="product-img-div gx-4 mx-md-0 d-md-inline-block">

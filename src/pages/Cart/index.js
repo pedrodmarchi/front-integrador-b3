@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Card, Container, Row, Col, Button } from "react-bootstrap"
 import CartItens from "../Home/Components/Cart/index"
+import { Helmet } from 'react-helmet';
 
 const Cart = () => {
     const { cart, clearCart } = useContext(CartContext)
@@ -9,6 +10,7 @@ const Cart = () => {
 
     return (
         <>
+
             <h2 className="text-center my-4">Cart</h2>
             {/* <Container fluid="lg" >
                 <Row>
@@ -43,6 +45,10 @@ const Cart = () => {
                     </Col>
                 </Row>
             </Container> */}
+
+        <Helmet>
+                <title>Tech Store | Carrinho</title>
+        </Helmet>
         </>
     )
 }

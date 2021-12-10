@@ -1,6 +1,7 @@
 import './style.scss';
 import github from '../../img/github.png';
 import linkedin from '../../img/linkedin.png';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
 
@@ -42,6 +43,9 @@ const About = () => {
 
 
         <>
+            <Helmet>
+                <title>Tech Store | Sobre</title>
+            </Helmet>
             <div id="about">
                 <h2>Saiba mais sobre nós</h2>
                 <section className="aboutContainer">

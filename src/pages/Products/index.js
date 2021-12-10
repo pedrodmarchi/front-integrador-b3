@@ -6,6 +6,7 @@ import { Card, ListGroup, ListGroupItem, CardGroup, Row, Container, Col, Button,
 import { Link } from 'react-router-dom';
 import { BsFillCartPlusFill, BsFillStarFill } from "react-icons/bs";
 import CardProducts from '../../Components/CardProducts'
+import { Helmet } from 'react-helmet';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -30,7 +31,10 @@ const Products = () => {
 
     return (
         <>
-        <Row xs={1} md={2} className="g-4 justify-content-between px-5 py-5">
+        <Helmet>
+                <title>Tech Store | {categoryName}</title>
+        </Helmet>
+        <Row xs={1} md={2} className="g-4 justify-content-between px-5 py-5 mx-0">
                 {products.map((product) =>
                     <Card style={{ width: '18rem' }} key={product.id} className="py-3 px-3">
                         <Card.Img variant="top" src={product.image} alt="imagem do produto" className="card-img-top" />
