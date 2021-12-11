@@ -1,15 +1,16 @@
 import './App.scss';
+import CartContextProvider from "./Context/";
 import RouteList from './routes';
-import CartContextProvider from "./context/CartContext";
+
 
 
 
 function App() {
   return (
     <>
-    <CartContextProvider>
+    
       <RouteList />
-    </CartContextProvider>
+    
     </>
   )
 }

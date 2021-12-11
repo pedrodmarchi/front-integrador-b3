@@ -1,4 +1,5 @@
 import { Card, ListGroup, ListGroupItem, CardGroup,Row, Container, Col, Button, Badge } from 'react-bootstrap';
+import { useCart } from '../../Context/index';
 import { BsFillCartPlusFill, BsFillStarFill } from "react-icons/bs";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -8,15 +9,21 @@ import './style.scss';
 import { Helmet } from 'react-helmet';
 
 const Product = () => {
+
+    const { add } = useCart();
+    /* const { cart, clearCart } = useCart(); */
     const [product, setProduct] = useState({});
     const { id } = useParams();
+
+    /* const add = (product) => {
+        cart.addToCart(product);
+    } */
   
     useEffect(() => {
       async function loadRepositoryData() {
         try {
           const response = await api.get(`products/${id}`);
           setProduct(response.data);
-          console.log(product)
         } catch (error) {
           console.log(error);
         }
@@ -60,7 +67,7 @@ const Product = () => {
                         <ListGroupItem className="mx-auto mt-2">Em até 12x de R$ {((product.price)/12).toFixed(2)} sem juros no cartão <p>Ou em 1x no cartão com até <strong>10% OFF</strong></p></ListGroupItem>
                     </ListGroup>
                     <div className="d-flex justify-content-center mt-2">
-                    <Button variant="outline-success" clasName="d-flex">
+                    <Button variant="outline-success" clasName="d-flex" onClick={() => add(product)}>
                             <BsFillCartPlusFill className="align-self-start d-inline-flex me-2 mb-1"/>
                             <p className="mb-0 d-inline-flex"> Adicionar ao carrinho </p>
                     </Button>

@@ -1,7 +1,62 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useContext, useEffect, useState } from "react";
 
 
-export const CartContext = createContext();
+const CartContext = createContext();
+
+const CartProvider = ({children}) => {
+    const [cart, setCart] = useState([]);
+    const [totalValue, setTotalValue] = useState();
+
+    useEffect(() => {
+        console.log(cart);
+        let value = 0;
+        cart.map((product) => {
+            value =+ product.price;
+        })
+        setTotalValue(value);
+    }, [cart])
+
+    function add (product) {
+        const newCart = cart;
+        newCart.push(product);
+
+        setCart([...newCart])
+
+    }
+
+
+    const store = {
+        add,
+        cart,
+        totalValue
+    }
+
+    return (
+        <CartContext.Provider value={store}>
+            {children}
+        </CartContext.Provider>
+    )
+}
+
+export function useCart() {
+    const context = useContext(CartContext);
+    const { 
+        cart,
+        add,
+        totalValue
+
+    } = context
+
+    return {
+        cart,
+        add,
+        totalValue
+
+    }
+}
+
+export default CartProvider;
+/* export const CartContext = createContext();
 
 const saveCart = (cart) => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -32,7 +87,7 @@ const reducer = (state, action) => {
 };
 
 
-const CartContextProvider = ({ children }) => {
+export const CartContextProvider = ({ children }) => {
 
     const [cart, dispatch] = useReducer(reducer, initialState);
 
@@ -56,4 +111,9 @@ const CartContextProvider = ({ children }) => {
     )
 }
 
-export default CartContextProvider;
+export const useCart = () => {
+    const cart = useContext(CartContext);
+    return cart;
+}
+
+export default CartContextProvider; */

@@ -8,6 +8,7 @@ import logo from './img/logo.png';
 import { useEffect, useState } from 'react';
 import api from '../../../../services/api';
 import { BsFillCartPlusFill, BsFillStarFill } from "react-icons/bs";
+import TotalCartItens from '../../../../routes/index'
 
 const Header = () => {
 
@@ -18,7 +19,6 @@ const Header = () => {
             .get("/products/categories")
             .then((response) => {
                 setProducts(response.data);
-                console.log(products);
             })
             .catch((error) => {
                 console.log(error);

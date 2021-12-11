@@ -1,10 +1,14 @@
 /* eslint-disable no-lone-blocks */
+import { CartContext } from '../../Context/index';
+import CartItens from '../../pages/Home/Components/Cart';
 import './style.scss';
 import api from '../../services/api';
 import { useEffect, useState } from 'react';
 import { Card, ListGroup, ListGroupItem, CardGroup,Row, Container, Col, Button, Badge } from 'react-bootstrap';
 import { BsFillCartPlusFill, BsFillStarFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+
+
 
 const CardProducts = () => {
     const [products, setProducts] = useState([]);
@@ -45,7 +49,7 @@ const CardProducts = () => {
                     </ListGroup>
                     <Card.Body className="mx-auto">
                         <Card.Link href="#">
-                            <Button as={Link} to={`/produtos/${product.id}`} variant="outline-success" clasName="d-flex">
+                            <Button as={Link} to={`/produtos/${product.id}`} variant="outline-success" className="d-flex" >
                                 <BsFillCartPlusFill className="align-self-start d-inline-flex me-2 mb-1"/>
                                 <p className="mb-0 d-inline-flex"> Comprar </p>
                             </Button>

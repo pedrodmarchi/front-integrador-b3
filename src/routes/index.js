@@ -6,10 +6,14 @@ import Cart from '../pages/Cart';
 import About from '../pages/About';
 import Header from '../pages/Home/Components/Header';
 import Footer from "../pages/Home/Components/Footer";
+import CartProvider from '../Context/index';
+import useCart from '../Context/index';
+import { ListGroup, ListGroupItem, Badge } from 'react-bootstrap';
 
 const RouteList = () => {
     return (
         <>
+            <CartProvider>
             <BrowserRouter>
             <Header />
                 <Routes>
@@ -21,8 +25,22 @@ const RouteList = () => {
                 </Routes>
             <Footer />    
             </BrowserRouter>
+            </CartProvider>
         </>
     )
 }
 
 export default RouteList;
+
+export const TotalCartItens = () => {
+
+    const {cart} = useCart();
+    let itens = cart.length;
+    console.log("soma:" , itens);
+    return itens;
+    
+
+    {/* <ListGroup>
+        <ListGroupItem className="mx-auto"><Badge bg="success">{itens}</Badge></ListGroupItem>
+    </ListGroup> */}
+}

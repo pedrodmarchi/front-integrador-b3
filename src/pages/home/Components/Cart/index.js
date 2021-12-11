@@ -1,8 +1,9 @@
 import { useContext } from 'react';
+/* import { CartContext, CartContextProvider } from '../../../../Context/index.js'; */
 import { Button, Col, Row } from 'react-bootstrap';
-import { CartContext } from '../../../../context/CartContext';
 
-const CartItens = ({product}) => {
+
+/* export const CartItens = ({product}) => {
     const { addToCart, removeFromCart } = useContext(CartContext);
     const {id, title, price, count } = product;
     return (
@@ -16,11 +17,11 @@ const CartItens = ({product}) => {
             </Col>
             <Col className='d-flex align-items-center '>Quant: {count}</Col>
             <Col xs={2} className='d-flex justify-content-evenly align-items-center flex-wrap'>
-                <Button className='d-inline-flex  justify-content-center flex-fill' variant="danger" onClick={() => removeFromCart(product)} >-</Button>
-                <Button className='d-inline-flex  justify-content-center flex-fill' variant="success" onClick={() => addToCart(product)}>+</Button>
+                <Button className='d-inline-flex  justify-content-center flex-fill' variant="danger" onClick={() => removeFromCart(product)}> - </Button>
+                <Button className='d-inline-flex  justify-content-center flex-fill' variant="success" onClick={() => addToCart(product)}> + </Button>
             </Col>
         </Row>
     );
 }
 
-export default CartItens;
+export default CartItens; */
