@@ -51,7 +51,7 @@ import { Link } from 'react-router-dom';
                 <title>Tech Store | Carrinho</title>
         </Helmet> */
 
-export default () => {
+export default function Cart() {
     const { add, cart, remove } = useCart();
 
     return (
