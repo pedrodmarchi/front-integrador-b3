@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from '../pages/Home/index.js';
-import Products from '../pages/Products';
-import Product from '../pages/Product';
-import Cart from '../pages/Cart';
-import About from '../pages/About';
-import Header from '../pages/Home/Components/Header';
+import Home from "../pages/Home/index.js";
+import Products from "../pages/Products";
+import Product from "../pages/Product";
+import Cart from "../pages/Cart";
+import About from "../pages/About";
+import Header from "../pages/Home/Components/Header";
 import Footer from "../pages/Home/Components/Footer";
-import CartProvider from '../Context/index';
-import useCart from '../Context/index';
+import CartProvider from "../Context/index";
+import useCart from "../Context/index";
 /* import { ListGroup, ListGroupItem, Badge } from 'react-bootstrap'; */
 
 const RouteList = () => {
