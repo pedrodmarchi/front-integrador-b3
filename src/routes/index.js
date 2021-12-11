@@ -8,7 +8,7 @@ import Header from '../pages/Home/Components/Header';
 import Footer from "../pages/Home/Components/Footer";
 import CartProvider from '../Context/index';
 import useCart from '../Context/index';
-import { ListGroup, ListGroupItem, Badge } from 'react-bootstrap';
+/* import { ListGroup, ListGroupItem, Badge } from 'react-bootstrap'; */
 
 const RouteList = () => {
     return (
@@ -38,9 +38,4 @@ export const TotalCartItens = () => {
     let itens = cart.length;
     console.log("soma:" , itens);
     return itens;
-    
-
-    {/* <ListGroup>
-        <ListGroupItem className="mx-auto"><Badge bg="success">{itens}</Badge></ListGroupItem>
-    </ListGroup> */}
 }
