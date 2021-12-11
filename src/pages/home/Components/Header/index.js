@@ -8,7 +8,7 @@ import logo from './img/logo.png';
 import { useEffect, useState } from 'react';
 import api from '../../../../services/api';
 import { BsFillCartPlusFill, BsFillStarFill } from "react-icons/bs";
-import TotalCartItens from '../../../../routes/index'
+import TotalCartItens from '../../../../routes'
 
 const Header = () => {
 
